@@ -18,30 +18,14 @@ export class NewComponent implements OnInit {
     this.newProductObj = { title: "", price: "", imgUrl: "" };
     this.errMsg = "";
   }
+ 
   goToProducts() {
     console.log('goto products func clicked');
-    return this._router.navigate(['/products']);
+    this._router.navigate(['/products']);
   }
-  // createNew(){
-  //   this._dataService.createNew(this.newProductObj)
-  //   .subscribe(
-  //     (response)=>{
-  //       // this.getProducts()
-  //       //not working
-  //       console.log('create new response hi :', response);
-  //       this.errMsg = response;
-
-  //     },
-  //     (err) => { 
-  //       console.log('createNew fun in new component ts :', err); 
-  //       this.errMsg = err;
-
-  //     }
-
-  //   )
-  // }
 
   createNew() {
+    
     const tempObservable = this._dataService.createNew(this.newProductObj);
     tempObservable.subscribe(
       (response) => {

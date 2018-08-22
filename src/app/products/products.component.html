@@ -15,12 +15,9 @@
                 <p>Product Title: {{product.title}}</p>
                 <p> Product Id: {{product._id}}</p>
               </div>
-              <a [routerLink]="['/edit',product._id]" class="btn btn-primary mr-1">Edit</a>
+              <a [routerLink]="['/edit',product._id]" class="btn btn-primary mr-1">Edit</a>  <button (click)="delete(product._id)" class="btn btn-primary mr-1">delete</button> 
 
-
-              <a [routerLink]="['/delete',product._id]" class="btn btn-primary mr-1">Delete</a>
-
-              <!-- <button (click)="delete(product._id)">delete</button> -->
+               <!-- <a [routerLink]="['/delete',product._id]" class="btn btn-primary mr-1">Delete</a> -->
 
             </div>
           </div>

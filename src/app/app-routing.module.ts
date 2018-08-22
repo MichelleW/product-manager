@@ -9,9 +9,9 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   { path: 'products', component: ProductsComponent },
   { path: 'edit/:id', component: EditComponent },
-  // { path: 'new', component: NewComponent },
+  { path: 'new', component: NewComponent },
   { path: 'delete/:id', component: DeleteComponent },
-  { path: 'home', component: HomeComponent},
+  // { path: 'home', component: HomeComponent},
   {path:'',pathMatch:'full',component:ProductsComponent}
 ]
 

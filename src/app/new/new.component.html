@@ -6,7 +6,7 @@
 
     {{errMsg.message}} new product: {{newProductObj.title}}
   </div>
-  <form (submit)="create()">
+  <form (submit)="createNew()">
     Title:
     <input type="text" [(ngModel)]="newProductObj.title" name="newProductObj.title" class="form-control"> Price
     <div class="input-group mb-2">
@@ -19,12 +19,12 @@
     Image Url
     <input type="text" [(ngModel)]="newProductObj.imgUrl" name="newProductObj.imgUrl" class="form-control mb-5">
 
-    <button (click)="createNew()" class="btn btn-primary mr-2">Create</button>
+    <input type="submit" class="btn btn-primary mr-1" value="Create">
 
     <a [routerLink]="['/products']" class="btn btn-primary mr-1">Cancel</a>
-  </form>
 
-  <button (click)="goToProducts()" class="btn btn-primary mr-2">goToProducts</button>
+  </form>
+ 
   <router-outlet></router-outlet>
 
 </div>

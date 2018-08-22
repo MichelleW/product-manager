@@ -29,6 +29,21 @@ export class ProductsComponent implements OnInit {
 
       )
   }
+
+  delete(id) {
+    console.log("hi from delete func in produc component, id: ", id);
+    const tempObservable = this._dataService.delete(id);
+    tempObservable.subscribe(
+      (success) => {
+        console.log('delete success :', success);
+        this.getProducts();
+      },
+      (error) => {
+        console.log('delete error :', error);
+      }
+    );
+
+  }
  
 
 }
