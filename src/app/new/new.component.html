@@ -1,11 +1,10 @@
 <div class="box" *ngIf="newProductObj">
  
   <h2>Create a New Product</h2>
-  <div class="alert alert-danger" *ngIf="errMsg">
-
-
-    {{errMsg.message}} new product: {{newProductObj.title}}
-  </div>
+  
+  <div class="alert alert-danger" *ngIf="errMsg.price">{{errMsg.price.message}}</div>
+  <div class="alert alert-danger" *ngIf="errMsg.title">{{errMsg.title.message}}</div>
+ 
   <form (submit)="createNew()">
     Title:
     <input type="text" [(ngModel)]="newProductObj.title" name="newProductObj.title" class="form-control"> Price

@@ -33,11 +33,6 @@ export class DataService {
     console.log('delete func data.service :', id);
     return this._http.delete('/productmgr-products/' + id);
   }
-  // delete(id) {
-  //   console.log('delete data.service :', id);
-  //   return this._http.delete('/productmgr-products/' + id);
-
-  // }
 
   
 }

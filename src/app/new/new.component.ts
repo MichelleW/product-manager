@@ -25,15 +25,22 @@ export class NewComponent implements OnInit {
   }
 
   createNew() {
-    
     const tempObservable = this._dataService.createNew(this.newProductObj);
     tempObservable.subscribe(
       (response) => {
-        console.log('res in createNew()',response);
-        this.goToProducts();
+        if(response){
+          console.log('res in createNew()',response);
+          this.errMsg = response['errors'];
+          console.log('err msg ', this.errMsg)
+        }
+        else{
+          this.goToProducts();
+        }
+        
       },
       (error) => {
         console.log(error);
+        this.errMsg = error;
       }
     );
   }
