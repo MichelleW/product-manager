@@ -1,4 +1,4 @@
-import { ProductsComponent } from './../products/products.component';
+
 import { DataService } from './../data.service';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
